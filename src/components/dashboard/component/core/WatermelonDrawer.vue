@@ -40,9 +40,14 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 
+interface Item {
+    title: string,
+    icon: string,
+}
+
 @Component
 export default class WatermelonDrawer extends Vue {
-    private items: any = [
+    private items: Item[] = [
         {title: 'Dashboard', icon: 'mdi-view-dashboard'},
         {title: 'Photos', icon: 'mdi-image'},
         {title: 'About', icon: 'mdi-help-box'},

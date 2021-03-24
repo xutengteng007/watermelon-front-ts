@@ -16,10 +16,12 @@
     "vuetify": "^2.4.7"
   },
   "devDependencies": {
+    "@mdi/font": "^5.9.55",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "deepmerge": "^4.2.2",
+    "material-design-icons-iconfont": "^v6.1.0",
     "sass": "^1.24.3",
     "sass-loader": "^8.0.0",
     "typescript": "~4.1.5",
