@@ -1,6 +1,7 @@
 <template>
     <v-navigation-drawer
         id="core-navigation-drawer"
+        v-model="frame.drawer"
         :dark="barColor !== 'rgba(228, 226, 226, 1), rgba(255, 255, 255, 0.7)'"
         :expand-on-hover="expandOnHover"
         :src="barImage"
@@ -60,6 +61,7 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 import {Prop} from "vue-property-decorator";
+import { State } from 'vuex-class';
 
 interface Item {
     title: string,
@@ -95,8 +97,9 @@ export default class WatermelonDrawer extends Vue {
     private barColor: string = 'rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)';
     private barImage: string = 'https://demos.creative-tim.com/material-dashboard/assets/img/sidebar-1.jpg';
 
-    @Prop()
     private expandOnHover: boolean = false;
+
+    @State private drawer: any;
 }
 </script>
 

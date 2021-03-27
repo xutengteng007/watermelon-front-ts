@@ -7,7 +7,7 @@
         flat
         height="75"
     >
-        <v-btn class="mr-3" elevation="1" fab small>
+        <v-btn class="mr-3" elevation="1" fab small @click="setDrawerFunc">
             <v-icon v-if="value">
                 mdi-view-quilt
             </v-icon>
@@ -62,6 +62,7 @@ import Vue from "vue";
 import Component from "vue-class-component";
 // Components
 import {VHover, VListItem} from 'vuetify/lib'
+import {Mutation} from 'vuex-class';
 
 @Component({
     components: {
@@ -95,12 +96,19 @@ export default class WatermelonAppBar extends Vue {
     private name: string = 'Upgrade';
     private search: string = 'Search';
     private notifications: any = [
-        'Mike John Responded to your email',
-        'You have 5 new tasks',
-        'You\'re now friends with Andrew',
-        'Another Notification',
-        'Another one',
+        '未读消息1',
+        '未读消息2',
+        '未读消息3',
+        '未读消息4',
+        '未读消息5',
     ];
+
+    @Mutation("setDrawer") private setDrawer: any;
+
+    private setDrawerFunc() {
+        this.value = !this.value
+        this.setDrawer();
+    }
 }
 </script>
 
