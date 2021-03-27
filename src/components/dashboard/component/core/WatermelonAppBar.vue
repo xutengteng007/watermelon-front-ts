@@ -2,6 +2,7 @@
     <v-app-bar
         id="app-bar"
         app
+        absolute
         color="transparent"
         flat
         height="75"
@@ -90,7 +91,7 @@ import {VHover, VListItem} from 'vuetify/lib'
     }
 })
 export default class WatermelonAppBar extends Vue {
-    private value: boolean = true;
+    private value: boolean = false;
     private name: string = 'Upgrade';
     private search: string = 'Search';
     private notifications: any = [

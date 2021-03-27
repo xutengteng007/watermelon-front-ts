@@ -1,17 +1,13 @@
 <template>
-  <Index></Index>
+    <router-view></router-view>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import Index from './components/dashboard/Index.vue';
+import {Component, Vue} from 'vue-property-decorator';
 
-@Component({
-  components: {
-    Index,
-  },
-})
-export default class App extends Vue {}
+@Component
+export default class App extends Vue {
+}
 </script>
 
 <style>
